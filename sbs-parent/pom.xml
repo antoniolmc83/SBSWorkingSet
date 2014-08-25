@@ -26,6 +26,7 @@
 	<jaxws-rs.version>2.0</jaxws-rs.version>
 	<jaxws-jersey.version>2.6</jaxws-jersey.version>
 	<jaxws-spring.version>1.9</jaxws-spring.version>
+	<rich-faces.version>4.2.2.Final</rich-faces.version>
   </properties>
   
   <dependencyManagement>
@@ -142,7 +143,12 @@
 	      <version>${jaxws-spring.version}</version>
 		</dependency>		
 		
-				
+		<!-- Rich Faces -->
+		<dependency>
+			<groupId>org.richfaces</groupId>
+			<artifactId>richfaces-bom</artifactId>
+			<version>${rich-faces.version}</version>
+		</dependency>		
   	</dependencies>  
   </dependencyManagement>
   

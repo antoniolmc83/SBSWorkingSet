@@ -7,7 +7,7 @@
     <artifactId>sbs-parent</artifactId>
     <groupId>almc.sbs</groupId>
     <version>0.0.1-SNAPSHOT</version>
-  </parent>
+  </parent> 
 
   <artifactId>SBSWSTasas</artifactId>
   <packaging>war</packaging>
@@ -19,6 +19,17 @@
       <artifactId>junit</artifactId>
       <scope>test</scope>
     </dependency>
+	 
+	<!-- JSF-RichFaces -->
+	<dependency> 
+		<groupId>org.richfaces.ui</groupId>
+		<artifactId>richfaces-components-ui</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>org.richfaces.core</groupId>
+		<artifactId>richfaces-core-impl</artifactId>
+	</dependency>
+	
 	
     <!-- JAX-WS --> 
 	<dependency>

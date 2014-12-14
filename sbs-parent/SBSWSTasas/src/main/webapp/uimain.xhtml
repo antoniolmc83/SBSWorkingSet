@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:a4j="http://richfaces.org/a4j"
+ 	xmlns:rich="http://richfaces.org/rich">
+
+<f:view>
+	<h:head>
+	 Menu title
+	</h:head>
+
+	<h:body>
+	
+	<h:form>
+		<rich:toolbar height="26px">
+			<rich:dropDownMenu mode="ajax" >
+				<f:facet name="label">
+					<h:panelGroup>
+						<h:outputText value="File" />					
+					</h:panelGroup>				
+				</f:facet>
+				<rich:menuItem label="New"></rich:menuItem>
+				<rich:menuItem label="Open"></rich:menuItem>
+				<rich:menuGroup label="Save as...">
+					<rich:menuItem label="Save"></rich:menuItem>
+					<rich:menuItem label="Save all"></rich:menuItem>				
+				</rich:menuGroup>
+				<rich:menuItem label="Close"></rich:menuItem>
+				<rich:menuSeparator id="menuSeparator"></rich:menuSeparator>
+				<rich:menuItem label="Exit"></rich:menuItem>
+			
+			</rich:dropDownMenu>
+			<rich:dropDownMenu mode="ajax">
+				<f:facet name="label">
+					<h:panelGroup><h:outputText value="Otros" /></h:panelGroup>
+				</f:facet>
+				<rich:menuItem label="Buscar Entidad Financiera" action="#{searchEF.doLoad()}"></rich:menuItem>
+			
+			</rich:dropDownMenu>
+		
+		
+		</rich:toolbar>
+	</h:form>
+	
+	
+	
+	
+	
+	</h:body>
+</f:view>
+
+</html>

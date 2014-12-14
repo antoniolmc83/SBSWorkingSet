@@ -10,5 +10,5 @@ import pe.almc.sbs.bean.ProductoPK;
 public interface ProductoRepository extends JpaRepository<Producto, ProductoPK>{
 
 	List<Producto> findByTipoprod(String tipoprod);
-
+	
 }

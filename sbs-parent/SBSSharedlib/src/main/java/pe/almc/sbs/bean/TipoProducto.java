@@ -13,10 +13,10 @@ public enum TipoProducto {
 	private TipoProducto(String codigo) {
 		this.codigo = codigo;
 	}
-		
-	@Override
-	public String toString() {
+	
+	public String getCodigo() {
 		return codigo;
 	}
+		
 	
 }

@@ -79,6 +79,11 @@ public class Condicion implements Serializable{
         hash += (codigo != null ? codigo.hashCode() : 0);
         return hash;
     }
+    
+    @Override
+    public String toString() {
+    	return getCodigo() + " | " + getDescripcion()+ " | " + getProducto();
+    }
 
 	
 }

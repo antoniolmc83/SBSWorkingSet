@@ -1,0 +1,62 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:f="http://java.sun.com/jsf/core"
+ xmlns:ui="http://java.sun.com/jsf/facelets"
+ xmlns:a4j="http://richfaces.org/a4j"
+ xmlns:rich="http://richfaces.org/rich">
+
+ <f:view>
+ <h:head></h:head>
+ <h:body>
+
+ <rich:panel header="Richfaces sample validation and auto-completion">
+ 	<h:form>
+   	
+   	<h:panelGrid columns="2">
+   		<h:outputText value="Region:" />
+	    <rich:select enableManualInput="true" defaultLabel="start typing for select" value="#{formTasasBean.region}"> 
+	     	<f:selectItems value="#{formTasasBean.listAllRegion}" var="r" itemValue="#{r.codigo}" itemLabel="#{r.nombre}"/>
+	     	<a4j:ajax event="selectitem" render="lstTipoOper" execute="@this"></a4j:ajax>
+	    </rich:select>
+	    
+	    <h:outputText value="Seleccione tipo de operación:" />
+	    <rich:select id="lstTipoOper" enableManualInput="true" defaultLabel="start typing for select" value="#{formTasasBean.tipoProducto}" > 
+	     	<f:selectItems value="#{formTasasBean.listTiposProducto}" var="l" itemValue="#{l.codigo}" />
+	     	<a4j:ajax event="selectitem" render="lstProduct" execute="@this"></a4j:ajax>
+	     	<a4j:ajax event="selectitem" render="lstCondicion" execute="@this"></a4j:ajax>
+	    </rich:select>
+
+	    <h:outputText value="Seleccione producto:" />
+	    <rich:select id="lstProduct" enableManualInput="true" defaultLabel="start typing for select" value="#{formTasasBean.codProducto}"> 
+	     	<f:selectItems value="#{formTasasBean.listProducto}" var="p" itemValue="#{p.productoPK.codigo}" itemLabel="#{p.descripcion}"/>
+	     	<a4j:ajax event="selectitem" render="lstCondicion" execute="@this"></a4j:ajax>
+	    </rich:select>
+	    
+	    <h:outputText value="Seleccione Condicion:" />
+	    <rich:select id="lstCondicion" enableManualInput="true" defaultLabel="start typing for select" value="#{formTasasBean.condicion}"> 
+	     	<f:selectItems value="#{formTasasBean.listCondicion}" var="c" itemValue="#{c.codigo}" itemLabel="#{c.descripcion}"/>
+	    </rich:select>
+	    
+	    <h:outputText value="Enter your name" />
+	    <h:inputText id="name" value="#{userBean.name}">
+	        <rich:validator />
+	    </h:inputText>
+	    
+	    <rich:message for="name" />
+	
+	    <h:outputText value="Enter your state" />
+	    <rich:autocomplete value="#{userBean.state}" minChars="1" autocompleteMethod="#{userBean.autocomplete}" />
+	     
+	    <h:outputText value="Photo:" />
+	    <rich:fileUpload fileUploadListener="#{fileUploadBean.listener}" id="upload" acceptedTypes="jpg, gif, png, bmp" 
+	     	ontyperejected="alert('Only JPG, GIF, PNG and BMP files are accepted');" maxFilesQuantity="1" >
+	     	<a4j:ajax event="uploadcomplete" execute="@none" />     	
+	    </rich:fileUpload>
+     </h:panelGrid>
+  </h:form>
+ </rich:panel>
+
+ </h:body>
+ </f:view>
+
+</ui:composition>

@@ -75,5 +75,10 @@ public class Producto implements Serializable{
         hash += (productoPK != null ? productoPK.hashCode() : 0);
         return hash;
     }
+    
+    @Override
+    public String toString() {
+    	return getProductoPK() + " | " + getDescripcion();
+    }
 	
 }

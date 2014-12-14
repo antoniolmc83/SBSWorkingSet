@@ -26,7 +26,8 @@
 	<jaxws-rs.version>2.0</jaxws-rs.version>
 	<jaxws-jersey.version>2.6</jaxws-jersey.version>
 	<jaxws-spring.version>1.9</jaxws-spring.version>
-	<rich-faces.version>4.2.2.Final</rich-faces.version>
+	<rich-faces.version>4.3.7.Final</rich-faces.version>
+	<jsf.version>2.1.19</jsf.version>
   </properties>
   
   <dependencyManagement>
@@ -148,7 +149,24 @@
 			<groupId>org.richfaces</groupId>
 			<artifactId>richfaces-bom</artifactId>
 			<version>${rich-faces.version}</version>
-		</dependency>		
+			<scope>import</scope>
+			<type>pom</type>
+		</dependency>
+		
+		
+		<!-- JSF -->
+	    <dependency>
+	      <groupId>com.sun.faces</groupId>
+	      <artifactId>jsf-api</artifactId>
+	      <version>${jsf.version}</version>
+	    </dependency>
+	
+	    <dependency>
+	      <groupId>com.sun.faces</groupId>
+	      <artifactId>jsf-impl</artifactId>
+	      <version>${jsf.version}</version>
+	    </dependency>
+				
   	</dependencies>  
   </dependencyManagement>
   

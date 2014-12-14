@@ -71,22 +71,24 @@ public class SBSHtmlParser {
 						
 		List<String> cols = null;
 		InfoTasaDiaria pf = null;
-		for(int i=1; i<items.length; i++){
+		for(int i=1; i<items.length; i++){//Rows of tasas
 			cols = parserTD(items[i].trim());
 			if( cols!=null ){
 				pf = new InfoTasaDiaria();
 				//Recuperar el tipo de informacion en cada columna
-				for(int j=0; j<cabecera.size(); j++){
-					BigDecimal monto = BigDecimal.valueOf( Double.valueOf(cols.get(j).replace("%", "").trim()));
-					if( cabecera.get(i).equals("Entidad") ){
+				for(int j=0; j<cabecera.size(); j++){					
+					if( cabecera.get(j).equals("Entidad") ){
 						pf.setEntidad( cols.get(j) );		
+					}else{
+						BigDecimal monto = BigDecimal.valueOf( Double.valueOf(cols.get(j).replace("%", "").trim()));
+						setearInfoTasaDiaria(cabecera.get(j), pf, monto);	
 					}
-					setearInfoTasaDiaria(cabecera.get(j), pf, monto);
+					
 				}
 				//Agregar info tasa diaria
 				resp.add(pf);
 			}
-		}							
+		}						
 		return resp;
 	}
 	

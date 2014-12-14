@@ -29,7 +29,7 @@ public class InfoTasaDiariaServiceImpl implements InfoTasaDiariaService{
 	@Resource
 	private InfoTasaDiariaRepository informacionTasaDiariaRepository;
 	
-	@Transactional
+	@Transactional()
 	@Override
 	public InfoTasaDiaria create(InfoTasaDiaria informacionTasaDiaria) {
 		if( informacionTasaDiariaRepository.exists(informacionTasaDiaria.getInfotasadiariaPK()) ){

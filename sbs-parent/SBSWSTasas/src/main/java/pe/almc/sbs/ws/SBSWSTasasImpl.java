@@ -4,8 +4,6 @@ package pe.almc.sbs.ws;
 import java.util.List;
 
 import javax.jws.WebService;
-import javax.jws.soap.SOAPBinding;
-import javax.jws.soap.SOAPBinding.Style;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

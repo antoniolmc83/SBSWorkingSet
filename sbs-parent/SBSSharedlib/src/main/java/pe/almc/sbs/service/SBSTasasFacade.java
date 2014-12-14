@@ -65,7 +65,12 @@ public class SBSTasasFacade {
 	 */
 	public List<Producto> productoFindAll() {
 		return productoService.findAll();
-	}	
+	}
+	
+	
+	public Producto productoFindById(String codigo, String tipoProd){
+		return productoService.findById(codigo, tipoProd);
+	}
 	
 	/**
 	 * Recupera todos las regiones
@@ -75,7 +80,13 @@ public class SBSTasasFacade {
 		return regionService.findAll();
 	}
 	
-	
+	/**
+	 * Get products filtered by product type
+	 * @return
+	 */	
+	public List<Producto> productoFindByTipoprod(String tipoProd){
+		return productoService.findByTipoprod(tipoProd);
+	}
 
 	@Transactional
 	public String obtenerRegiones(){

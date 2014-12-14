@@ -97,7 +97,7 @@ public class SBSWebClientServiceImpl implements SbsWebClientService  {
 			urlConnection.setRequestProperty("Accept-Language", "es-MX,es-ES;q=0.8,es-AR;q=0.7,es;q=0.5,en-US;q=0.3,en;q=0.2");
 			urlConnection.setRequestProperty("Accept-Encoding", "gzip, deflate");
 			urlConnection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=utf-8");
-			urlConnection.setRequestProperty("Referer", "	http://www.sbs.gob.pe/app/retasas/paginas/retasasInicio.aspx");
+			urlConnection.setRequestProperty("Referer", "http://www.sbs.gob.pe/app/retasas/paginas/retasasInicio.aspx");
 			urlConnection.setRequestProperty("Cookie", cookie);
 			urlConnection.setRequestProperty("Connection", "keep-alive");
 

@@ -233,7 +233,7 @@ public class InfoTasaDiaria implements Serializable{
 
 	@Override
 	public String toString() {	
-		return getEntidadfinanciera() +" | " + getEntidad() + " | " +  getTcea() +  " | " + getCuota() ;
+		return getEntidadfinanciera() +" | " + getEntidad() + " | " + getCondicion() + " | " +getTcea() +  " | " + getCuota() + " | " + getMonedaTrea();
 	}
 
 	public void setEntidad(String entidad) {

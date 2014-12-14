@@ -19,7 +19,25 @@
       <artifactId>junit</artifactId>
       <scope>test</scope>
     </dependency>
-    
+	<!-- Postgres -->
+	<dependency>
+		<groupId>postgresql</groupId>
+		<artifactId>postgresql</artifactId>
+		<scope>test</scope>
+	</dependency>    
+	<!-- JPA Provider -->
+	<dependency>
+		<groupId>org.eclipse.persistence</groupId>
+		<artifactId>eclipselink</artifactId>
+		<scope>test</scope>
+	</dependency>
+	<!-- CGLIB is required to process @Configuration classes -->
+	<dependency>
+		<groupId>cglib</groupId>
+		<artifactId>cglib</artifactId>
+		<scope>test</scope>
+	</dependency>	
+	    
 	<!-- JPA --> 
 	<dependency>
 		<groupId>org.hibernate.javax.persistence</groupId>

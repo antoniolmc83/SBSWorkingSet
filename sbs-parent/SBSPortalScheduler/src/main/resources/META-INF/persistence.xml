@@ -11,6 +11,7 @@
 		<class>pe.almc.sbs.bean.Region</class>
 		<class>pe.almc.sbs.bean.InfoTasaDiaria</class>
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/SBSTasas" />
 			<property name="javax.persistence.jdbc.password" value="mardecopas" />

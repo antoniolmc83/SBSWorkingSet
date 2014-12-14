@@ -8,7 +8,7 @@ import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import javax.faces.event.ActionEvent;
+
 
 import org.richfaces.event.FileUploadEvent;
 import org.richfaces.model.UploadedFile;
@@ -22,6 +22,10 @@ import org.richfaces.model.UploadedFile;
 @SessionScoped
 public class FileUploadBean implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private List<UploadedImage> files = new ArrayList<UploadedImage>();
 	private String fileName;
 	
